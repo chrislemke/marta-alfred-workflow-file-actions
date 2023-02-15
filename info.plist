@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>ai.lemke.martafileactions</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>1DC83F24-80EF-44BE-859C-7DC2E2CEA6EE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>539FBEC5-1EEF-4031-AA00-1FD58061CF57</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C94F481A-AFF5-4F90-85C5-897EFDD646A9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>157FFEA7-0A39-4043-B70A-B9257B39CADE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Chris Lemke</string>
+	<key>description</key>
+	<string>Open and reveal folders and files with Marta</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Marta universal file actions</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string>/System/Volumes/Data/Applications/Marta.app</string>
+				<key>sourcefile</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>539FBEC5-1EEF-4031-AA00-1FD58061CF57</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Open with Marta</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>1DC83F24-80EF-44BE-859C-7DC2E2CEA6EE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>70</integer>
+				<key>script</key>
+				<string>set parentPath to characters 1 thru -((offset of "/" in (reverse of items of "{query}" as string)) + 1) of "{query}" as stringtell application "Marta"	open POSIX file parentPath as text	activateend tell</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>157FFEA7-0A39-4043-B70A-B9257B39CADE</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Reveal in Marta</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>C94F481A-AFF5-4F90-85C5-897EFDD646A9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># Marta universal file actions 🦊 ❤️ 🎩
+**Open and reveal folders and files with Marta**
+
+## Instructions
+[Marta](https://marta.sh/) 🦊 is a great file manager for MacOS. [Alfred](https://www.alfredapp.com/) 🎩 is the perfect tool to increase your productivity on the Mac. This small Alfred workflow allows you to open and reveal folders and files directly in Marta using Alfred's universal actions.
+
+## Setup ⚒️
+Installation is simple:
+1. Download the workflow
+2. Double-click the workflow to install it
+3. In Alfred, under *Universal action*/*Actions*, check *Workflow file actions* under *Other Actions*
+
+## Usage 🧑‍💻
+Just use the Alfred universal action. Two new actions will be available: *Open in Marta* and *Reveal in Marta*.</string>
+	<key>uidata</key>
+	<dict>
+		<key>157FFEA7-0A39-4043-B70A-B9257B39CADE</key>
+		<dict>
+			<key>xpos</key>
+			<real>340</real>
+			<key>ypos</key>
+			<real>285</real>
+		</dict>
+		<key>1DC83F24-80EF-44BE-859C-7DC2E2CEA6EE</key>
+		<dict>
+			<key>xpos</key>
+			<real>140</real>
+			<key>ypos</key>
+			<real>150</real>
+		</dict>
+		<key>539FBEC5-1EEF-4031-AA00-1FD58061CF57</key>
+		<dict>
+			<key>xpos</key>
+			<real>340</real>
+			<key>ypos</key>
+			<real>150</real>
+		</dict>
+		<key>C94F481A-AFF5-4F90-85C5-897EFDD646A9</key>
+		<dict>
+			<key>xpos</key>
+			<real>140</real>
+			<key>ypos</key>
+			<real>285</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>version</key>
+	<string>0.1.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/chrislemke/marta-alfred-workflow-file-actions</string>
+</dict>
+</plist>

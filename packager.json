@@ -1,0 +1,11 @@
+{
+    "export_file": "MartaFileActions.alfredworkflow",
+    "bundle_id": "ai.lemke.martafileactions",
+    "readme": "README.md",
+    "resources": [
+        "1DC83F24-80EF-44BE-859C-7DC2E2CEA6EE.png",
+        "3A89C9E8-F1F2-41F8-A772-0336AF10546B.png",
+        "icon.png",
+        "info.plist"
+    ]
+}
